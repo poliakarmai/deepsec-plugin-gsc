@@ -14,6 +14,10 @@ GSC (Git Security Checker) plugin for deepsec — deterministic matchers + PoC-b
 ## Installation
 
 ```bash
+# via git (recommended for now)
+npm install github:poliakarmai/deepsec-plugin-gsc
+
+# or via npm (when published)
 npm install @poliakarm/plugin-gsc
 ```
 
