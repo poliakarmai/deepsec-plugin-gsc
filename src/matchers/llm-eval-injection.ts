@@ -45,8 +45,9 @@ export const llmEvalInjectionMatcher: MatcherPlugin = {
           label: "eval() on dynamically built string (GS004)",
         },
         // GS004: exec() on a variable rather than a triple-quoted literal
+        // (request./input() already covered by GS037 above — avoid double-reporting)
         {
-          regex: /exec\s*\(\s*(?!["']{3})\w/,
+          regex: /exec\s*\(\s*(?!["']{3}|request\.|input\s*\()\w/,
           label: "exec() on variable — code injection risk (GS004)",
         },
       ],
